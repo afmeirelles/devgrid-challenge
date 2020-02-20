@@ -16,6 +16,7 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://bitbucket.org/afmeirelles/devgrid-challenge#readme",
   "dependencies": {
+    "@godaddy/terminus": "^4.3.1",
     "ajv": "^6.11.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
