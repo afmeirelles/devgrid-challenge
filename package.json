@@ -1,0 +1,37 @@
+{
+  "name": "devgrid-challenge",
+  "version": "1.0.0",
+  "description": "DevGrid challenge project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nyc mocha src/**/test/*.js",
+    "watch-test": "npm test; chokidar src/**/*.js src/**/test/*.js -i 'coverage' -c 'npm test' --silent"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/afmeirelles/devgrid-challenge.git"
+  },
+  "author": "André Meirelles (https://github.com.br/afmeirelles)",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://bitbucket.org/afmeirelles/devgrid-challenge#readme",
+  "dependencies": {
+    "ajv": "^6.11.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "csv-parse": "^4.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "sinon": "^8.1.1"
+  },
+  "engines": {
+    "node": "10"
+  }
+}
