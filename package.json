@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nyc mocha src/**/test/*.js",
+    "test": "nyc --reporter=text --reporter=html mocha src/**/test/*.js",
     "watch-test": "npm test; chokidar src/**/*.js src/**/test/*.js -i 'coverage' -c 'npm test' --silent"
   },
   "repository": {
@@ -22,6 +22,7 @@
     "cors": "^2.8.5",
     "csv-parse": "^4.8.5",
     "express": "^4.17.1",
+    "iate-components": "^0.5.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0"
   },
@@ -34,5 +35,15 @@
   },
   "engines": {
     "node": "10"
+  },
+  "nyc": {
+    "exclude": [
+      "**/test/*.js"
+    ],
+    "check-coverage": true,
+    "branches": 100,
+    "lines": 100,
+    "functions": 100,
+    "statements": 100
   }
 }
