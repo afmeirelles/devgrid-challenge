@@ -30,7 +30,8 @@ describe('the gists translator', () => {
             createStub.throws(new UNAUTHORIZED('Invalid credentials'))
             const res = mockResponse()
             await translator.create({}, res)
-            expect(res.status.calledWith(401)).to.be.ok()
+            expect(res.status.firstCall.args).to.eql([401])
+            expect(res.json.firstCall.args).to.eql([{ message: 'Invalid credentials', info: undefined }])
         })
         
         it('should respond a 200 HTTP status and the contents the interactor returns')
