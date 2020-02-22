@@ -15,12 +15,12 @@ const entity = {
                     if (!memo[team]) {
                         memo[team] = { problemsSolved: 0, totalPenalty: 0, team }
                     }
-                    // if the answer is corret, it's another problem solved
+                    // if the answer is correct, it's another problem solved
                     if (status === 'C') {
                         memo[team].problemsSolved++
                         memo[team].totalPenalty += penalty
                     } else {
-                        // incorrect answers carry a 20min penalty
+                        // incorrect answers incur in a 20min penalty
                         memo[team].totalPenalty += 20
                     }
                 }
@@ -29,9 +29,9 @@ const entity = {
             {}
         )
         return _(pointsSum)
-            // orders teams in the scoredboard
+            // order teams in the scoredboard
             .orderBy([ 'problemsSolved', 'totalPenalty', 'team' ], [ 'desc', 'asc', 'asc' ])
-            // formats output
+            // format output
             .map(({ problemsSolved, totalPenalty, team }) => 
                 [ team, problemsSolved, totalPenalty ]
             )
