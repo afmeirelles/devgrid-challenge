@@ -3,15 +3,9 @@ const expect = require('expect.js')
 const sinon = require('sinon')
 const { UNAUTHORIZED } = require('iate-components').errors
 
+const responseMock = require('../../components/responseMock')
 const translator = require('../translator')
 const interactor = require('../interactor')
-
-const mockResponse = () => {
-    const res = {}
-    res.status = sinon.stub().returns(res)
-    res.json = sinon.stub()
-    return res
-}
 
 describe('the gists translator', () => {
 
@@ -30,14 +24,14 @@ describe('the gists translator', () => {
             // mock interactor create fn 
             createStub = sinon.stub(interactor, 'create')
             // mock the response obj
-            res = mockResponse()
+            res = responseMock()
         })
 
         afterEach(() => {
             createStub.restore()
         })
 
-        it('should respond an error if something goes wrong in the controller', async () => {
+        it('should respond an error if something goes wrong in the interactor', async () => {
             // stub interactor create function so it throws
             createStub.throws(new UNAUTHORIZED('Invalid credentials'))
             // call create fn
@@ -75,7 +69,7 @@ describe('the gists translator', () => {
             // mock interactor create fn 
             commentsStub = sinon.stub(interactor, 'comments')
             // mock the response obj
-            res = mockResponse()
+            res = responseMock()
         })
 
         afterEach(() => {
