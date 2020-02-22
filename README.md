@@ -27,4 +27,4 @@ Or set them directly in the gistCli.js file `(/src/components/gistCli.js)`:
 2. Run tests: `npm test`
 
 ## IATE architecture
-If you're interested in find more about the architecture used in this project, [please check out my article about it]: (https://www.linkedin.com/pulse/iate-yet-another-clean-architecture-andré-feijó-meirelles)
+If you're interested in find more about the architecture used in this project, [please check out my article about it](https://www.linkedin.com/pulse/iate-yet-another-clean-architecture-andré-feijó-meirelles)
