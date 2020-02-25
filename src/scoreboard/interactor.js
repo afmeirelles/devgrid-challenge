@@ -6,7 +6,7 @@ const interactor = {
         // get last scores
         const scores = await entity.getScores()
         // calculate and return scoreboard
-        return await entity.calculateScoreboard(scores)
+        return entity.calculateScoreboard(scores)
     }
 
 }
