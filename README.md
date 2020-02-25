@@ -1,19 +1,11 @@
 # DevGrid Challenge
 
 ## configs
-You can pass your git credentials through env vars:
-
-```GIT_USERNAME={your_username_here} GIT_PASSWORD={your_password_here} npm start```
-
-Or set them directly in the gistCli.js file `(/src/components/gistCli.js)`:
-
+1. Rename or make a copy of `.env-example` as `.env
+2. Replace values with your crendentials:
 ```
-    const Gists = require('gists')
-
-    module.exports = new Gists({
-        username: process.env.GIT_USERNAME || 'your_username_here',
-        password: process.env.GIT_PASSWORD || 'your_password_here'
-    })
+    GIT_USERNAME={{your_github_username}}
+    GIT_PASSWORD={{your_github_password}}
 ```
 
 ## how to run it
