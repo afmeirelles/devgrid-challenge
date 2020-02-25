@@ -1,7 +1,7 @@
 # DevGrid Challenge
 
 ## configs
-1. Rename or make a copy of `.env-example` as `.env
+1. Rename or make a copy of `.env-example` as `.env`
 2. Replace values with your crendentials:
 ```
     GIT_USERNAME={{your_github_username}}
