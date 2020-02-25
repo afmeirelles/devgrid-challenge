@@ -1,13 +1,10 @@
 const Gists = require('gists')
 const dotenv = require('dotenv')
+const get = require('lodash/get')
 
-const { parsed, error } = dotenv.config()
-
-if (error) {
-    throw Error('Missing or invalid .env file')
-}
+const { parsed } = dotenv.config()
 
 module.exports = new Gists({
-    username: parsed.GIT_USERNAME || '',
-    password: parsed.GIT_PASSWORD || ''
+    username: get(parsed, 'GIT_USERNAME'),
+    password: get(parsed, 'GIT_PASSWORD')
 })
