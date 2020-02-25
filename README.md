@@ -23,7 +23,7 @@ Or set them directly in the gistCli.js file `(/src/components/gistCli.js)`:
 2. Start the server: `npm start`
 
 ### tests
-1. Make sure depencencies are installed (`npm install`)
+1. Make sure dependencies are installed (`npm install`)
 2. Run tests: `npm test`
 
 ### Postman collection
